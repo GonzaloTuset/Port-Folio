@@ -19,6 +19,7 @@ function App() {
           <p>React Developer</p>
           <a>Descargar Cv</a>
           <div className="bg-black">Mi nombre es Gonzalo, tengo 23 años,recido en Buenos Aires,Argentina.</div>
+          <a>Cuento con mas de 800 hs de practica y estudio en React.JS, javascript, SQL</a>
         </article>
          </section>
       <section id="about" className="bg-black text-white h-[100px] mt-[1000px]">
