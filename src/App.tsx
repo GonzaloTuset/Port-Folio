@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import { scroller } from "react-scroll";
+import Profile from "./components/Profile";
 function App() {
   const scrollToSection = (sectionId: string) => {
     scroller.scrollTo(sectionId, {
@@ -23,6 +24,7 @@ function App() {
         </article>
          </section>
       <section id="about" className="bg-black text-white h-[100px] mt-[1000px]">
+        <Profile/>
         <div>Fuck</div>
       </section>
       
