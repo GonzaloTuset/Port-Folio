@@ -7,7 +7,7 @@ interface Repository {
   language: string;
 }
 const Profile: React.FC = () => {
-  const accessToken = "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"
+  const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'
   const [repositories, setRepositories] = useState<Repository[]>([])
 
