@@ -2,13 +2,14 @@ import axios, { AxiosInstance } from 'axios';
 import { useState, useEffect } from 'react';
 
 interface Repository {
-  id: number;
+  id: string;
   name: string;
+  language: string;
 }
 const Profile: React.FC = () => {
-  const accessToken = import.meta.env.VITE_TOKEN as string;
-  const apiUrl = 'https://api.github.com/user/repos';
-  const [repositories, setRepositories] = useState<Repository[]>([]); // Cambia "any[]" por el tipo correcto
+  const accessToken = "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"
+  const apiUrl = 'https://api.github.com/user/repos'
+  const [repositories, setRepositories] = useState<Repository[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +23,8 @@ const Profile: React.FC = () => {
       try {
         // Realiza la solicitud a la API de GitHub
         const response = await instance.get('');
-        setRepositories(response.data); // Almacena los repositorios en el estado
+        setRepositories(response.data); 
+        console.log(response.data)// Almacena los repositorios en el estado
       } catch (error) {
         console.error('Error al obtener repositorios:', error);
       }
@@ -35,7 +37,7 @@ const Profile: React.FC = () => {
     <div>
       {/* Renderiza los repositorios */}
       {repositories.map(repo => (
-        <div key={repo.name}>{repo.name}</div>
+        <div key={repo.id}>{repo.name}{repo.language}</div>
       ))}
     </div>
   );
