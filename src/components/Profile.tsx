@@ -24,7 +24,7 @@ const Profile: React.FC = () => {
         // Realiza la solicitud a la API de GitHub
         const response = await instance.get('');
         setRepositories(response.data); 
-        console.log(response.data)// Almacena los repositorios en el estado
+        console.log(response.data)
       } catch (error) {
         console.error('Error al obtener repositorios:', error);
       }
