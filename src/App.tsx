@@ -13,8 +13,9 @@ function App() {
   return (
     <>
     <Header scrollToSection={scrollToSection}/>
-    <main className={`bg-white w-screen h-screen `}>
-      <section id="home" className="bg-cyan-500 ">
+    <main className={` w-screen h-screen `}>
+      <div className=" w-[400px] card">
+      <section id="home" className=".card">
         <article className="col-12 col-lg-6 text-white px-3 px-lg-5 ">
           <h2 className="text-black">Gonzalo Tuset</h2>
           <p>React Developer</p>
@@ -23,11 +24,11 @@ function App() {
           <a>Cuento con mas de 800 hs de practica y estudio en React.JS, javascript, SQL</a>
         </article>
          </section>
-      <section id="about" className="bg-black text-white h-[100px] mt-[1000px]">
+      <section id="about" className=" text-white h-[100px] mt-[1000px]">
         <Profile/>
         <div>Fuck</div>
       </section>
-      
+      </div>
       </main>
       </>
   )
