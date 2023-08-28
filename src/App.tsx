@@ -13,9 +13,9 @@ function App() {
   return (
     <>
     <Header scrollToSection={scrollToSection}/>
-    <main className={` w-screen h-screen `}>
-      <div className=" w-[400px] card">
-      <section id="home" className=".card">
+    <main className={` h-screen `}>
+      <div className=" w-[375px] card">
+      <section id="home" >
         <article className="col-12 col-lg-6 text-white px-3 px-lg-5 ">
           <h2 className="text-black">Gonzalo Tuset</h2>
           <p>React Developer</p>
