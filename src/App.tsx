@@ -1,6 +1,6 @@
 import Header from "./components/Header"
 import { scroller } from "react-scroll";
-import Profile from "./components/Profile";
+import Profile from "./components/Projects";
 function App() {
   const scrollToSection = (sectionId: string) => {
     scroller.scrollTo(sectionId, {
