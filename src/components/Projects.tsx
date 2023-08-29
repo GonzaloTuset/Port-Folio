@@ -27,8 +27,6 @@ const Profile: React.FC = () => {
         // Realiza la solicitud a la API de GitHub para obtener repositorios
         const response = await instance.get('');
         const repos: Repository[] = response.data;
-        setRepositories(response.data)
-        console.log(repositories)
         // Filtra los repositorios privados
         const publicRepos = repos.filter(repo => !repo.private);
 
