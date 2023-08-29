@@ -26,7 +26,6 @@ function App() {
          </section>
       <section id="about" className=" text-white h-[100px] mt-[1000px]">
         <Profile/>
-        <div>Fuck</div>
       </section>
       </div>
       </main>

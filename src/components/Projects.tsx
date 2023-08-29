@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { useState, useEffect } from 'react';
-
+import { zonedTimeToUtc, format } from 'date-fns-tz';
 interface Repository {
   id: string;
   name: string;
@@ -54,7 +54,13 @@ const Profile: React.FC = () => {
         <div key={repo.id}>
           <h2>{repo.name}</h2>
           <p>Lenguaje: {repo.language}</p>
-          <p>Fecha de última actualización: {repo.pushed_at}</p>
+          <p>
+            Fecha de última actualización: {format(
+              zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
+              'dd/MM/yyyy HH:mm:ss', // Formato de fecha y hora
+              { timeZone: 'America/Argentina/Buenos_Aires' } // Zona horaria de destino (Argentina)
+            )}
+          </p>
         </div>
       ))}
     </div>
