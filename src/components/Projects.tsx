@@ -5,7 +5,7 @@ interface Repository {
   id: string;
   name: string;
   language: string;
-  updated_at: string;
+  pushed_at: string;
   private: boolean;
 }
 const Profile: React.FC = () => {   
@@ -33,12 +33,12 @@ const Profile: React.FC = () => {
         const publicRepos = repos.filter(repo => !repo.private);
 
         // Ordena los repositorios por fecha de actualización en orden descendente
-        publicRepos.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+        publicRepos.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
 
         // Obtén los últimos 3 repositorios actualizados
         const lastUpdatedRepos = publicRepos.slice(0, 3);
         setRepositories(lastUpdatedRepos);
-        console.log(repositories)
+        
       } catch (error) {
         console.error('Error al obtener repositorios:', error);
       }
@@ -54,7 +54,7 @@ const Profile: React.FC = () => {
         <div key={repo.id}>
           <h2>{repo.name}</h2>
           <p>Lenguaje: {repo.language}</p>
-          <p>Fecha de última actualización: {repo.updated_at}</p>
+          <p>Fecha de última actualización: {repo.pushed_at}</p>
         </div>
       ))}
     </div>
