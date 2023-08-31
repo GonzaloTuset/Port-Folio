@@ -9,6 +9,9 @@ body {
   background-position: center;
   
 }
+bdi {
+  unicode-bidi: isolate;
+}
 
 .card {
   backdrop-filter: blur(16px) saturate(180%);
