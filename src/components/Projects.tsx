@@ -8,7 +8,7 @@ interface Repository {
   pushed_at: string;
   private: boolean;
 }
-const Profile: React.FC = () => {   
+const Projects: React.FC = () => {   
   const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'
   const [repositories, setRepositories] = useState<Repository[]>([])
@@ -65,4 +65,4 @@ const Profile: React.FC = () => {
   );
 };
 
-export default Profile;
+export default Projects;
