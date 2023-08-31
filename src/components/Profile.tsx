@@ -1,12 +1,35 @@
 import perfil from '../assets/Perfil.jpg'
 const Profile: React.FC = () => {
   return(
-    <div className="bg-black w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]">
-      <div><span className='text-white text-2xl text-ellipsis'>Gonzalo Tuset</span></div>
-      <div className='flex flex-row '><bdi className='text-white mr-[10px]'>Full Stack Web Developer</bdi><div className='flex items-center'><img src="https://community.cloudflare.steamstatic.com/public/images/countryflags/ar.gif"/></div><p className='text-white'>Argentina</p></div>
-      <div className='w-[123px] border-cyan-300 border-2'>
+    <div className=" w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
+     <div className='pl-[18px] pb-[18px]'>
+      <div className='mt-[6px]'>
+        <span className='text-white text-2xl text-ellipsis family'>Gonzalo Tuset</span>
+      </div>
+      <div className='flex flex-row family pt-[4px]'>
+        <bdi className='text-white mr-[10px] text-sm text-ellipsis'>Full Stack Web Developer</bdi>
+          <div className='flex items-center'>
+            <img src="https://community.cloudflare.steamstatic.com/public/images/countryflags/ar.gif"/>
+          </div>
+            <p className='text-white text-ellipsis text-sm ml-[5px]'>Argentina</p>
+      </div>
+     </div>
+     <div className='flex flex-row h-[163px] w-[351px]'>
+      <div className='w-[123px] h-[112px] border-cyan-300 border-2'>
         <img src={perfil}></img>
       </div>
+      <div  className=' flex flex-col h-[30x] w-[200px] pl-[10px]'>
+        <div className='text-white family flex flex-row h-[30px] items-center mb-[13px]'>
+         <p>EDAD</p>
+          <div className='border-2 w-[32px] h-[32px] border-red-600 rounded-full ml-[10px]  flex justify-center items-center'>
+            <p >23</p>
+          </div>
+        </div>
+        <div className=' bg-white w-[206px] h-[70px] px-2 py-2'>
+         puta madre
+          </div>
+      </div>
+     </div>
     </div>
   )
 }

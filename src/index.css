@@ -12,7 +12,14 @@ body {
 bdi {
   unicode-bidi: isolate;
 }
-
+.family{
+  font-family: "Motiva Sans", Sans-serif;
+  
+}
+.blur-custom {
+  filter: blur(1px);
+ 
+}
 .card {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -32,6 +39,7 @@ bdi {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 video {
@@ -41,3 +49,7 @@ video {
 }
 
 
+.main-bg {
+  background-image: linear-gradient(to right, rgba(79, 70, 229, 0.8), rgba(154, 85, 236, 0.8), rgba(236, 71, 176, 0.8));
+  /* Ajusta los colores y la opacidad según tus preferencias */
+}

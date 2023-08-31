@@ -14,12 +14,12 @@ function App() {
   return (
     <>
     <Header scrollToSection={scrollToSection}/>
-    <main className={` h-screen `}>
-      <div className=" w-[375px] card">
+    <main className={` h-screen  `}>
+      <div className=" w-[375px] ">
       <section id="home" >
             <Profile/>
          </section>
-      <section id="about" className=" text-white h-[100px] mt-[1000px]">
+      <section id="about" className=" text-white h-[100px] ">
         <Projects/>
       </section>
       </div>
