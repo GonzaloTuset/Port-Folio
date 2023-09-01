@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <Header scrollToSection={scrollToSection}/>
-    <main className={` h-screen  `}>
+    <main className={` h-screen `}>
       <div className=" w-[375px] ">
       <section id="home" >
             <Profile/>

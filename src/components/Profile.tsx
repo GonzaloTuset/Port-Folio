@@ -25,7 +25,7 @@ const Profile: React.FC = () => {
             <p >23</p>
           </div>
         </div>
-        <div className=' bg-white w-[206px] h-[70px] px-2 py-2'>
+        <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent'>
          puta madre
           </div>
       </div>

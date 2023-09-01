@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --gradient-right: rgba(248, 70, 180, 0.301);
+  --gradient-left: rgba(9, 243, 99, 0.247);
+  --gradient-background: rgba(46, 13, 36, 0.93);
+  --gradient-background-right: rgba(70, 227, 248, 0);
+  --gradient-background-left: rgba(239, 243, 9, 0.13);
+  --color-showcase-header: rgba(57, 24, 61, 0.93);
+  --gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
+  --btn-background: rgb(90, 40, 92);
+  --btn-background-hover: rgb(100, 50, 102);
+  --btn-outline: rgba(140, 90, 142);
+}
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +37,8 @@ bdi {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
 
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  
+  
 }
 
 .video-background {
@@ -50,6 +63,16 @@ video {
 
 
 .main-bg {
-  background-image: linear-gradient(to right, rgba(79, 70, 229, 0.8), rgba(154, 85, 236, 0.8), rgba(236, 71, 176, 0.8));
-  /* Ajusta los colores y la opacidad según tus preferencias */
+  background: radial-gradient(farthest-side at top right, var(--gradient-right), transparent 500px),
+  radial-gradient(farthest-corner at top left, var(--gradient-left), transparent 600px),
+  radial-gradient(farthest-corner at bottom right, var(--gradient-background-right), transparent 500px),
+  radial-gradient(farthest-corner at bottom left, var(--gradient-background-left), transparent 600px);
+background-color: var(--gradient-background);
+margin-top: 0px;
+overflow: hidden;
+
+}
+.tranparent{
+  
+  background-color: rgba(31,8,24,0.4);
 }
