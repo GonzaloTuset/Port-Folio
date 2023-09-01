@@ -1,4 +1,5 @@
 import perfil from '../assets/Perfil.jpg'
+import Exp from '../assets/Captura.png'
 const Profile: React.FC = () => {
   return(
     <div className=" w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
@@ -25,8 +26,9 @@ const Profile: React.FC = () => {
             <p >23</p>
           </div>
         </div>
-        <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent'>
-         puta madre
+        <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent flex flex-row justify-center items-center'>
+         <img className='h-[50px] rounded' src={Exp}/>
+         <p className='text-white family p-[10px] text-sm'>Año de experiencia</p>
           </div>
       </div>
      </div>
