@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
             <p className='text-white text-ellipsis text-sm ml-[5px]'>Argentina</p>
       </div>
      </div>
-     <div className='flex flex-row h-[163px] w-[351px]'>
+     <div className='flex flex-row h-[130px] w-[351px]'>
       <div className='w-[123px] h-[112px] border-cyan-300 border-2'>
         <img src={perfil}></img>
       </div>
@@ -32,6 +32,8 @@ const Profile: React.FC = () => {
           </div>
       </div>
      </div>
+     <div className='family text-white text-[14px]'>Soy Gonzalo Tuset, Desarrollador FullStack, principalmente manejo react. Me enctanta programar,trabajar en equipo, adquirir nuevos conocimientos y estar en constante aprendizaje.</div>
+     
     </div>
   )
 }
