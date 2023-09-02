@@ -3,6 +3,7 @@ import { scroller } from "react-scroll"
 import Profile from "./components/Profile"
 import Projects from "./components/Projects"
 function App() {
+  // Se encarga de detectar la Id de la seccion y dirigirse a esta misma
   const scrollToSection = (sectionId: string) => {
     scroller.scrollTo(sectionId, {
       duration: 700,
@@ -12,19 +13,19 @@ function App() {
     });
   };
   return (
-    <>
+   <>
     <Header scrollToSection={scrollToSection}/>
-    <main className={` h-screen `}>
-      <div className=" w-[375px] ">
+   <main className={` h-screen `}>
+     <div className=" w-[375px] ">
       <section id="home" >
-            <Profile/>
-         </section>
+        <Profile/>
+      </section>
       <section id="about" className=" text-white h-[100px] ">
         <Projects/>
       </section>
-      </div>
-      </main>
-      </>
+     </div>
+   </main>
+   </>
   )
 }
 
