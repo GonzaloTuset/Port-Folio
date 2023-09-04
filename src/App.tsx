@@ -16,10 +16,9 @@ function App() {
   return (
    <>
     <Header scrollToSection={scrollToSection}/>
-   <main >
-     <div className=" w-[375px]">
+   <main className=" w-[375px]" >
       <section id="home" >
-        <Profile/>
+          <Profile/>
       </section>
       <section id="tech">
         <Info/>
@@ -27,7 +26,6 @@ function App() {
       <section id="about" className=" text-white">
         <Projects/>
       </section>
-     </div>
    </main>
    </>
   )

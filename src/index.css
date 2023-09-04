@@ -33,10 +33,10 @@ bdi {
  
 }
 .card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 2px;
+  background-color: #101214;
+  background-color: rgba( 0, 0, 0, 0.3 );
+  backdrop-filter: blur(20px);
+  border-radius: 3px;
 }
 
 .video-background {
