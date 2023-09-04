@@ -2,7 +2,7 @@ import perfil from '../assets/Perfil.jpg'
 import Exp from '../assets/Captura.png'
 const Profile: React.FC = () => {
   return(
-    <div className=" w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
+    <div className=" w-[375px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
      <div className='pl-[18px] pb-[18px]'>
       <div className='mt-[6px]'>
         <span className='text-white text-2xl text-ellipsis family'>Gonzalo Tuset</span>

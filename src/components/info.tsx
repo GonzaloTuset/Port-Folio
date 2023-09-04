@@ -1,6 +1,8 @@
 const Info: React.FC = () => {
   return(
-  <div className=" card"></div>
+  <div className=" w-[375px] h-[2000px] card">
+    hola
+  </div>
   )
 }
 export default Info
