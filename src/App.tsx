@@ -20,6 +20,9 @@ function App() {
       <section id="home" >
         <Profile/>
       </section>
+      <section id="tech">
+
+      </section>
       <section id="about" className=" text-white h-[100px] ">
         <Projects/>
       </section>
