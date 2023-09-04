@@ -47,7 +47,6 @@ const Projects: React.FC = () => {
 
   return (
     <div className=" w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
-        <div></div>
       {/* Renderiza los últimos 3 repositorios actualizados */}
       {repositories.map((repo) => (
         <div key={repo.id}>
