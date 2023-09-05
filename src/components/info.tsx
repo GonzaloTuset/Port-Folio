@@ -11,7 +11,7 @@ import mongo from '../assets/mongodb.svg'
 import postgre from '../assets/Postgresql_elephant.svg.png'
 import vite from '../assets/Vitejs-logo.svg.png'
 import figma from '../assets/figma.png'
-import trello from '../assets/trello.png'
+import trello from '../assets/trello-v2.svg'
 
 const Info: React.FC = () => {
   return(
