@@ -1,5 +1,7 @@
 import react from '../assets/react.svg'
 import javascript from '../assets/JavaScript-logo.png'
+import tailwind from '../assets/tailwind.jpg'
+import typescript from '../assets/typescript.png'
 
 const Info: React.FC = () => {
   return(
@@ -11,8 +13,10 @@ const Info: React.FC = () => {
       <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[200px] px-[4px] py-[4px] flex flex-col">
         <div className="w-[163px] h-[29px] flex items-center mx-[12px]"><a className="family text-[#ffffff]">Tech Stack</a></div>
         <div className=' grid gap-4 grid-cols-3 grid-rows-3'>
-          <img className='w-[10xp] h-[50px] ' src={react}/>
-          <img className='w-[10xp] h-[50px] rounded-sm' src={javascript}/>
+          <img className='w-[10xp] h-[40px] ' src={react}/>
+          <img className='w-[10xp] h-[40px] rounded-sm' src={javascript}/>
+          <img className='w-[10xp] h-[40px] rounded-sm' src={tailwind}/>
+          <img className='w-[10xp] h-[40px] ' src={typescript}/>
         </div>
       </div>
       <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[200px]">
