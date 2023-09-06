@@ -55,7 +55,7 @@ const Info: React.FC = () => {
          </div>
       </div>
       <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[100px] px-[4px] py-[4px] flex flex-col mb-[4px]">
-      <a className="btn btn-dark bg-black border" download="Curriculum_Gonzalo_Tuset(1).pdf" href="https://drive.google.com/file/d/1TvyoAVDH13o1fL2tIDV09sDHk9jPtsbw/view?usp=sharing">Descargar CV</a>
+      <a className="btn btn-dark bg-black border" download="CV_Gonzalo_Tuset.pdf" href="https://port-folio-gonzalo-tuset.vercel.app/">Descargar CV</a>
       </div>
       </div>
     </div>
