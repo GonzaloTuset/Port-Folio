@@ -7,7 +7,9 @@ interface Repository {
   language: string;
   pushed_at: string;
   private: boolean;
+
 }
+
 const Projects: React.FC = () => {   
   const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'

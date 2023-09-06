@@ -13,7 +13,10 @@ import vite from '../assets/Vitejs-logo.svg.png'
 import figma from '../assets/figma.png'
 import trello from '../assets/trello-v2.svg'
 
-const Info: React.FC = () => {
+interface Prop{
+  url:string;
+}
+const Info = (url:Prop) => {
   return(
   <div className=" w-[375px] h-[410px] card px-[3px] flex flex-col">
     <div className='w-[367.5px] h-[45px] info_trasn flex  items-center mb-[12px]'>
