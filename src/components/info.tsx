@@ -12,11 +12,10 @@ import postgre from '../assets/Postgresql_elephant.svg.png'
 import vite from '../assets/Vitejs-logo.svg.png'
 import figma from '../assets/figma.png'
 import trello from '../assets/trello-v2.svg'
+import LinkedIn from '../assets/LinkedIn.svg'
 
-interface Prop{
-  url:string;
-}
-const Info = (url:Prop) => {
+
+const Info: React.FC = () => {
   return(
   <div className=" w-[375px] h-[410px] card px-[3px] flex flex-col">
     <div className='w-[367.5px] h-[45px] info_trasn flex  items-center mb-[12px]'>
@@ -42,8 +41,15 @@ const Info = (url:Prop) => {
           <img className='h-[42px] ' src={trello}/>
         </div>
       </div>
-      <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[340px]">
+      <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[340px] px-[4px] py-[4px] flex flex-col">
 
+        <div className="w-[163px] h-[29px] flex items-center mx-[12px] my-[12px]"><a className="family text-[#ffffff]">Mis redes</a></div>
+        <div>
+          <a href='https://www.linkedin.com/in/gonzalo-tuset-a6116b202/'>
+            <img className='h-[60px]' src={LinkedIn}alt='linkedIn_link'/>
+          </a>
+          
+        </div>
       </div>
     </div>
   </div>
