@@ -1,5 +1,5 @@
 import perfil from '../assets/Perfil.jpg'
-import Exp from '../assets/Captura.png'
+import captura from '../assets/captura.png'
 const Profile: React.FC = () => {
   return(
     <div className=" w-[375px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
@@ -27,7 +27,7 @@ const Profile: React.FC = () => {
           </div>
         </div>
         <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent flex flex-row justify-center items-center'>
-         <img className='h-[50px] rounded' src={Exp}/>
+         <img className='h-[50px] rounded' src={Captura}/>
          <p className='text-white family p-[10px] text-sm'>Año de experiencia</p>
           </div>
       </div>

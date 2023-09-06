@@ -21,7 +21,8 @@ const Info: React.FC = () => {
     <div className='w-[367.5px] h-[45px] info_trasn flex  items-center mb-[12px]'>
       <a className="family text-[20px] mx-[12px] my-[12px] text-[rgba(81,188,206)]">Open To Work</a>
     </div>
-    <div className="h-[200px] w-[367.5px] flex flex-row justify-between">
+    
+    <div className="h-[380px] w-[367.5px] flex flex-row justify-between">
       <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[340px] px-[4px] py-[4px] flex flex-col">
         <div className="w-[163px] h-[29px] flex items-center mx-[12px] my-[12px]"><a className="family text-[#ffffff]">Tech Stack</a></div>
         <div className=' grid gap-4 grid-cols-3 grid-rows-4'>
@@ -41,15 +42,21 @@ const Info: React.FC = () => {
           <img className='h-[42px] ' src={trello}/>
         </div>
       </div>
-      <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[340px] px-[4px] py-[4px] flex flex-col">
-
+      <div className='flex flex-col '>
+      <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[135px] px-[4px] py-[4px] flex flex-col mb-[4px]">
         <div className="w-[163px] h-[29px] flex items-center mx-[12px] my-[12px]"><a className="family text-[#ffffff]">Mis redes</a></div>
-        <div>
+         <div className=' flex flex-row items-center '>
           <a href='https://www.linkedin.com/in/gonzalo-tuset-a6116b202/'>
             <img className='h-[60px]' src={LinkedIn}alt='linkedIn_link'/>
           </a>
-          
-        </div>
+          <a href='https://github.com/GonzaloTuset'>
+            <img className='h-[60px]' src={github} alt='Github_link'/>
+          </a>
+         </div>
+      </div>
+      <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[100px] px-[4px] py-[4px] flex flex-col mb-[4px]">
+      <a className="btn btn-dark bg-black border" download="Curriculum_Gonzalo_Tuset(1).pdf" href="https://drive.google.com/file/d/1TvyoAVDH13o1fL2tIDV09sDHk9jPtsbw/view?usp=sharing">Descargar CV</a>
+      </div>
       </div>
     </div>
   </div>
