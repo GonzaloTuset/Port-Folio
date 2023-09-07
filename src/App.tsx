@@ -16,7 +16,7 @@ function App() {
   return (
    <>
     <Header scrollToSection={scrollToSection}/>
-   <main className=" w-[375px]" >
+   <main className=" flex flex-col justify-center items-center" >
       <section id="home" >
           <Profile/>
       </section>
