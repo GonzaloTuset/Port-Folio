@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
   const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'
   const [repositories, setRepositories] = useState<Repository[]>([])
-  const [morepush, setMorePush] = useState<Repository[]>([])
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,17 +31,17 @@ const Projects: React.FC = () => {
         // Realiza la solicitud a la API de GitHub para obtener repositorios
         const response = await instance.get('');
         const repos: Repository[] = response.data;
+    
         // Filtra los repositorios privados
         const publicRepos = repos.filter(repo => !repo.private && repo.name !== "GonzaloTuset");
-
+         
         // Ordena los repositorios por fecha de actualización en orden descendente
         publicRepos.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
 
         // Obtén los últimos 3 repositorios actualizados
         const lastUpdatedRepos = publicRepos.slice(0, 3)
-        const lastpush = publicRepos.slice(0, 1)
+        
         setRepositories(lastUpdatedRepos);
-        setMorePush(lastpush)
 
 
       } catch (error) {
@@ -62,27 +62,34 @@ const Projects: React.FC = () => {
       {/* Renderiza los últimos 3 repositorios actualizados */}
       {/*<a  href={`https://github.com/GonzaloTuset/${repo.name}`}>*/}
       {repositories.map((repo) => (
-        <div key={repo.id} className='pt-[20px] px-[10px] pb-[11px]' >
-          <div className='flex flex-row card h-[155px] w-[350px] px-[8px] py-[8px]'>
-            <div className='h-[69px]'>
+       
+        <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col' >
+          <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px]'>
+            <div className='h-[69px] flex flex-col'>
             <img className='w-[168px] h-[69px]' src={` ${missImage}`} />
+           
             </div>
             <div className='flex items-center h-[69px] w-[120px] pt-[10px]'>
               <h2 className='family pl-[15px] text-[20px] w-[120px]'>{repo.name}</h2>
             </div>
           </div>
-          <p>Lenguaje: {repo.language}</p>
-          <p>
-            última actualización: {format(
-              zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
-              'dd/MM/yyyy HH:mm:ss', // Formato de fecha y hora
+          <div className='w-[330px] px-[8px] py-[8px] family  '>
+            <p className='pb-[5px]'>Lenguaje: {repo.language}</p>
+            <p>
+            Última actualización: {format(
+              zonedTimeToUtc(repo.pushed_at, 'ART'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
+              `HH:mm:ss dd/MM/yyyy`, // Formato de fecha y hora
               { timeZone: 'America/Argentina/Buenos_Aires' } // Zona horaria de destino (Argentina)
             )}
           </p>
+          </div>
+       
 
         </div>
+        
       ))}
     </div>
+   
   );
 };
 
