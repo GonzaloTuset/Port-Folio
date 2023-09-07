@@ -23,7 +23,7 @@ function App() {
       <section id="tech">
         <Info/>
       </section>
-      <section id="about" className=" text-white">
+      <section id="about" className=" text-white px-[3px] ">
         <Projects/>
       </section>
    </main>

@@ -17,7 +17,7 @@ import LinkedIn from '../assets/LinkedIn.svg'
 
 const Info: React.FC = () => {
   return (
-    <div className=" w-[375px] h-[410px] card px-[3px] flex flex-col">
+    <div className=" w-[375px] h-[410px] card px-[3px] flex flex-col mb-[12px]">
       <div className='w-[367.5px] h-[45px] info_trasn flex  items-center mb-[12px]'>
         <a className="family text-[20px] mx-[12px] my-[12px] text-[rgba(81,188,206)]">Open To Work</a>
       </div>

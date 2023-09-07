@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
   const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'
   const [repositories, setRepositories] = useState<Repository[]>([])
-
+  const [morepush,setMorePush] = useState<Repository[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,14 +30,17 @@ const Projects: React.FC = () => {
         const response = await instance.get('');
         const repos: Repository[] = response.data;
         // Filtra los repositorios privados
-        const publicRepos = repos.filter(repo => !repo.private);
+        const publicRepos = repos.filter(repo => !repo.private && repo.name!=="GonzaloTuset");
 
         // Ordena los repositorios por fecha de actualización en orden descendente
         publicRepos.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
 
         // Obtén los últimos 3 repositorios actualizados
-        const lastUpdatedRepos = publicRepos.slice(0, 3);
+        const lastUpdatedRepos = publicRepos.slice(0, 3)
+        const lastpush = publicRepos.slice(0,1)
         setRepositories(lastUpdatedRepos);
+        setMorePush(lastpush)
+        
         
       } catch (error) {
         console.error('Error al obtener repositorios:', error);
@@ -48,9 +51,15 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <div className=" w-[374px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
+    <div className=" w-[368.7px] h-[410px] card flex flex-col">
+      <div className=' bg-black w-full h-[29px]'><p>Ultimos Proyectos</p></div>
+      
+      {/*morepush.map((last) => ( 
+        <div>{last.name}</div>
+      ))*/}
       {/* Renderiza los últimos 3 repositorios actualizados */}
       {repositories.map((repo) => (
+        <a  href={`https://github.com/GonzaloTuset/${repo.name}`}>
         <div key={repo.id}>
           <h2>{repo.name}</h2>
           <p>Lenguaje: {repo.language}</p>
@@ -62,6 +71,7 @@ const Projects: React.FC = () => {
             )}
           </p>
         </div>
+        </a>
       ))}
     </div>
   );
