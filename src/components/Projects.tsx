@@ -9,15 +9,12 @@ interface Repository {
   pushed_at: string;
   private: boolean;
   image: string;
-
 }
 
 const Projects: React.FC = () => {
   const accessToken = import.meta.env.VITE_TOKEN
   const apiUrl = 'https://api.github.com/user/repos'
   const [repositories, setRepositories] = useState<Repository[]>([])
-  
-
   useEffect(() => {
     const fetchData = async () => {
       const instance: AxiosInstance = axios.create({
@@ -40,17 +37,16 @@ const Projects: React.FC = () => {
 
         // Obtén los últimos 3 repositorios actualizados
         const lastUpdatedRepos = publicRepos.slice(0, 3)
-        
-        setRepositories(lastUpdatedRepos);
+        setRepositories(lastUpdatedRepos)
 
 
       } catch (error) {
         console.error('Error al obtener repositorios:', error);
       }
     };
-
     fetchData(); // Llama a la función para cargar los repositorios cuando el componente se monta
   }, []);
+
 
   return (
     <div className=" w-[368.7px]  card flex flex-col">
@@ -83,7 +79,7 @@ const Projects: React.FC = () => {
             )}
           </p>
           </div>
-       
+              
 
         </div>
         
