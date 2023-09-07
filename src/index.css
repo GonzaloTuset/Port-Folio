@@ -38,6 +38,12 @@ bdi {
   backdrop-filter: blur(20px);
   border-radius: 3px;
 }
+.fondo {
+  background: rgb(57, 24, 61, 0.93);
+  background: linear-gradient(90deg, var(--gradient-showcase-header-left) 0%, var(--color-showcase-header) 90%);
+  backdrop-filter: blur(20px);
+  border-radius: 3px;
+}
 
 .video-background {
   position: fixed;
