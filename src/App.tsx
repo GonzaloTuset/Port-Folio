@@ -21,12 +21,14 @@ function App() {
       <section id="home" >
           <Profile/>
       </section>
-      <section id="tech" className="md:flex md:justify-center md:w-full" >
+      <div className="md:w-[976px] md:flex md:flex-row-reverse ">
+      <section id="tech" className="md:flex " >
         <Info/>
       </section>
       <section id="about"  >
         <Projects/>
       </section>
+      </div>
       </div>
    </main>
    </>
