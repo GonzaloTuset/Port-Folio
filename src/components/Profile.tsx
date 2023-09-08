@@ -2,7 +2,7 @@ import perfil from '../assets/Perfil.jpg'
 
 const Profile: React.FC = () => {
   return(
-    <div className=" w-[375px] h-[350px] pl-[8px] pr-[8px] pt-[8px]  ">
+    <div className=" w-full h-[350px] pl-[8px] pr-[8px] pt-[8px] md:w-[976px] ">
      <div className='pl-[18px] pb-[18px]'>
       <div className='mt-[6px]'>
         <span className='text-white text-2xl text-ellipsis family'>Gonzalo Tuset</span>

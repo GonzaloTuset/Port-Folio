@@ -16,16 +16,18 @@ function App() {
   return (
    <>
     <Header scrollToSection={scrollToSection}/>
-   <main className=" flex flex-col justify-center items-center" >
+   <main className="flex flex-col items-center " >
+   <div className="md:w-[976px] main-bg">
       <section id="home" >
           <Profile/>
       </section>
-      <section id="tech">
+      <section id="tech" className="md:flex md:justify-center md:w-full" >
         <Info/>
       </section>
-      <section id="about" className=" text-white px-[3px] ">
+      <section id="about"  >
         <Projects/>
       </section>
+      </div>
    </main>
    </>
   )

@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
 
 
   return (
-    <div className=" w-[368.7px]  card flex flex-col">
+    <div className="  ml-[3px] mr-[3px]  text-white card flex flex-col md:w-[367px]">
       <div className=' fondo w-full h-[40px] py-[5px] px-[10px] flex items-center'><p className='family text-[16px]'>Ultimos Proyectos</p></div>
 
       {/*morepush.map((last) => ( 
