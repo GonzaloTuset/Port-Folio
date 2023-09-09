@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
             <p className='pb-[5px]'>Lenguaje: {repo.language}</p>
             <p>
             Última actualización: {format(
-              zonedTimeToUtc(repo.pushed_at, 'ART'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
+              zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
               `HH:mm:ss dd/MM/yyyy`, // Formato de fecha y hora
               { timeZone: 'America/Argentina/Buenos_Aires' } // Zona horaria de destino (Argentina)
             )}
