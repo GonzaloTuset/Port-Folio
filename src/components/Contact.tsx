@@ -54,11 +54,11 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
         <div className='flex flex-row justify-center justify-around items-center px-[8px] py-[8px]'>
-        <div className='w-[40px] h-[38px] border-cyan-300 border-2'>
+        <div className='w-[38px] h-[38px] border-cyan-300 border-2 mr-[8px]'>
         <img className='w-[38px] h-[34px]' src={perfil}></img>
       </div>
           <textarea
-            className='rounded-sm bg-[#00000080] w-[307px] resize-none h-[38px]'
+            className='rounded-sm family text-[#969696] bg-[#00000080] w-[307px] resize-none h-[38px] flex'
             placeholder="mensaje"
             id="message"
             name="message"
@@ -67,7 +67,9 @@ const ContactForm: React.FC = () => {
             onChange={handleTextareaChange}  
           />
         </div>
-        <button type="submit">Enviar</button>
+        <div className='flex flex-row-reverse '>
+        <button className='bg-[#708d05] rounded-sm flex items-center' type="submit">Enviar</button>
+        </div>      
       </form>
     </div>
   );
