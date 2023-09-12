@@ -3,6 +3,7 @@ import { scroller } from "react-scroll"
 import Profile from "./components/Profile"
 import Projects from "./components/Projects"
 import Info from "./components/info"
+import ContactForm from "./components/Contact"
 function App() {
   // Se encarga de detectar la Id de la seccion y dirigirse a esta misma
   const scrollToSection = (sectionId: string) => {
@@ -25,10 +26,13 @@ function App() {
       <section id="tech" className="md:flex " >
         <Info/>
       </section>
-      <section id="about"  >
+      <section id="about">
         <Projects/>
       </section>
       </div>
+      <section id="Contact">
+        <ContactForm/>
+      </section>
       </div>
    </main>
    </>

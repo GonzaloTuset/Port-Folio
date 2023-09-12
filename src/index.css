@@ -81,3 +81,6 @@ overflow: hidden;
 .info_trasn{
   background-color: rgba(0,0,0,0.5);
 }
+.textArea{
+  height: 38px;
+}
