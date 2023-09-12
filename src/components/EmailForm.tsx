@@ -1,46 +1,56 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-const EmailForm: React.FC = () => {
+const ContactForm: React.FC = () => {
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs.init('O8LXvzAaPoUMIe7VH');
-    try {
-      await emailjs.send(
-        'service_vfykdrm', // Reemplaza con el ID de tu servicio en Email.js
-        'template_cv7uykl', // Reemplaza con el ID de tu plantilla en Email.js
-        { email }
-      );
 
-      alert('Su cuenta se borrara en breve');
-    } catch (error) {
-      console.error('Error al enviar el correo electrónico:', error);
-      alert('Hubo un error al enviar el correo electrónico');
-    }
+    emailjs.send('default_service', 'template_name', {
+      from_name: email,
+      to_name: 'Tu nombre', // Puedes configurar el destinatario
+      message: message,
+    })
+      .then((response) => {
+        console.log('Correo electrónico enviado con éxito', response);
+      })
+      .catch((error) => {
+        console.error('Error al enviar el correo electrónico', error);
+      });
   };
-  
 
   return (
-    <div className='pl-[100px]'>
-      <h1 className='p-[10px] text-[30px]'>Ingrese su mail</h1>
+    <div>
+      <h2>Formulario de Contacto</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email: </label>
-        <input className='text-black rounded-sm mx-[10px]'
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-          title="Por favor, ingresa una dirección de correo electrónico válida."
-        />
-        <button className='hover:border-red-600 hover:text-red-800 hover:bg-red-500 rounded bg-transparent border-2 border-[rgb(83,100,113)]' type="submit">Borrar Cuenta</button>
+        <div>
+          <label htmlFor="email">Tu dirección de correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Escribe tu mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+        </div>
+        <button type="submit">Enviar</button>
       </form>
     </div>
   );
 };
 
-export default EmailForm;
+export default ContactForm;
