@@ -1,14 +1,14 @@
-import axios, { AxiosInstance } from 'axios';
-import { useState, useEffect } from 'react';
-import { zonedTimeToUtc, format } from 'date-fns-tz';
+import axios, { AxiosInstance } from 'axios'
+import { useState, useEffect } from 'react'
+import { zonedTimeToUtc, format } from 'date-fns-tz'
 import missImage from '../assets/noSeEncuentra.png'
 interface Repository {
-  id: string;
-  name: string;
-  language: string;
-  pushed_at: string;
-  private: boolean;
-  image: string;
+  id: string
+  name: string
+  language: string
+  pushed_at: string
+  private: boolean
+  image: string
 }
 
 const Projects: React.FC = () => {
@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
 
       try {
         // Realiza la solicitud a la API de GitHub para obtener repositorios
-        const response = await instance.get('');
-        const repos: Repository[] = response.data;
+        const response = await instance.get('')
+        const repos: Repository[] = response.data
     
         // Filtra los repositorios privados
-        const publicRepos = repos.filter(repo => !repo.private && repo.name !== "GonzaloTuset");
+        const publicRepos = repos.filter(repo => !repo.private && repo.name !== "GonzaloTuset")
          
         // Ordena los repositorios por fecha de actualización en orden descendente
-        publicRepos.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
+        publicRepos.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime())
 
         // Obtén los últimos 3 repositorios actualizados
         const lastUpdatedRepos = publicRepos.slice(0, 3)
@@ -41,11 +41,11 @@ const Projects: React.FC = () => {
 
 
       } catch (error) {
-        console.error('Error al obtener repositorios:', error);
+        console.error('Error al obtener repositorios:', error)
       }
-    };
-    fetchData(); // Llama a la función para cargar los repositorios cuando el componente se monta
-  }, []);
+    }
+    fetchData();// Llama a la función para cargar los repositorios cuando el componente se monta
+  }, [])
 
 
   return (
@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
             <p className='pb-[5px]'>Lenguaje: {repo.language}</p>
             <p>
             Última actualización: {format(
-              zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), // Reemplaza 'Etc/GMT' con la zona horaria de origen
+              zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), 
               `HH:mm:ss dd/MM/yyyy`, // Formato de fecha y hora
               { timeZone: 'America/Argentina/Buenos_Aires' } // Zona horaria de destino (Argentina)
             )}
@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
       ))}
     </div>
    
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

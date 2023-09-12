@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
 
   const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
-  };
+  }
 
   useEffect(() => {
     const textarea = document.getElementById('message') as HTMLTextAreaElement;
@@ -73,4 +73,4 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm
