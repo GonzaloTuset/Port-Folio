@@ -7,7 +7,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
       <a onClick={() => scrollToSection("about")}>Proyectos</a>
       <a onClick={() => scrollToSection("tech")}>Tech stack</a>
-      <a onClick={() => scrollToSection("Contact")}>Contactame</a>
+      <a onClick={() => scrollToSection("Contact")}>Contacto</a>
     </div>
   );
 };
