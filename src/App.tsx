@@ -26,13 +26,15 @@ function App() {
       <section id="tech" className="md:flex " >
         <Info/>
       </section>
+      <div>
       <section id="about">
         <Projects/>
       </section>
-      </div>
       <section id="Contact">
         <ContactForm/>
       </section>
+      </div>
+      </div>
       </div>
    </main>
    </>

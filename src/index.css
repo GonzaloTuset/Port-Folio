@@ -19,7 +19,7 @@ body {
   padding-top: 50px;
   background-image: url('./assets/fondo.webm');
   background-position: center;
-  
+  overflow-x: hidden;
 }
 bdi {
   unicode-bidi: isolate;
