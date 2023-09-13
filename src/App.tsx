@@ -22,7 +22,7 @@ function App() {
       <section id="home" >
           <Profile/>
       </section>
-      <div className="md:w-[976px] md:flex md:flex-row-reverse ">
+      <div className="md:w-[976px] md:flex md:flex-row-reverse md:justify-center md:justify-around">
       <section id="tech" className="md:flex " >
         <Info/>
       </section>
