@@ -9,6 +9,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
     setmenuOpen(!menuOpen)
   }
   return (
+    <>
+    
     <div className="fixed top-0 left-0 w-full  bg-[rgb(23,29,37)] p-4 shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
      <div className=" hidden md:flex md:flex-row md:justify-center">
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
@@ -77,6 +79,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
