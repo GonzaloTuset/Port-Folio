@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   return (
     <>
     
-    <div className="fixed top-0 left-0 w-full  bg-[rgb(23,29,37)] p-4 shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
+    <div className="fixed top-0 left-0 w-full  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
      <div className=" hidden md:flex md:flex-row md:justify-center">
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
       <a onClick={() => scrollToSection("about")}>Proyectos</a>
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
      </div>
      <button
           onClick={toggleMenu}
-          className="  flex md:hidden text-white hover:text-gray-400 focus:outline-none"
+          className="  flex md:hidden text-white  hover:text-gray-400 focus:outline-none pr-[10px]"
         >
           <svg
             className=" md:hidden w-6 h-6 "
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
           </svg>
         </button>
         {menuOpen && (
-        <div className="md:hidden mt-2space-y-2 flex flex-col">
+        <div className=" mt-[30px] h-screen w-1/2 bg-[rgb(23,29,37)] fixed md:hidden mt-2space-y-2 flex flex-col  ">
           <a
             onClick={() => {
               scrollToSection("home");
