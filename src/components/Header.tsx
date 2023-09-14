@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   return (
     <>
     
-    <div className="fixed top-0 left-0 w-full  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
+    <div className="fixed top-0 left-0 w-screen  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
      <div className=" hidden md:flex md:flex-row md:justify-center">
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
       <a onClick={() => scrollToSection("about")}>Proyectos</a>
