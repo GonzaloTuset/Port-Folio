@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className='family  px-[3px]'>
      <form onSubmit={handleSubmit}>
-      <div className='text-[14px] h-[29px] tranparent bg-[#0000004D] text-[#969696] flex flex-row justify-center justify-evenly items-center mt-[50px]'>
+      <div className='text-[14px] h-[29px] tranparent bg-[#0000004D] text-[#969696] flex flex-row  justify-evenly items-center mt-[50px]'>
       <h2 className='text-[20px]'>¡Trabajemos juntos!</h2>
       
      
@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-        <div className='flex flex-row justify-center justify-around items-center px-[8px] py-[8px]'>
+        <div className='flex flex-row  justify-around items-center px-[8px] py-[8px]'>
         <div className='w-[38px] h-[38px] border-cyan-300 border-2 mr-[8px]'>
         <img className='w-[38px] h-[34px]' src={perfil}></img>
       </div>
