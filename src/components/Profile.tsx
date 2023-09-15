@@ -35,7 +35,7 @@ const Profile: React.FC = () => {
       <div className='family text-white text-[14px] flex flex-col justify-around'>
         <p className='p-[2px]'>hola soy gonzalo 😊!</p>
         <p className='p-[2px]'>Soy un Desarrollador Full-stack con experiencia en Desarrollo web, me especializo en React, javascript, Typescript, TailwindCSS, MongoDB y MySQL.</p>
-        <p className='p-[2px]'>Me encuentro ansioso por seguir creciendo, de poder formar parte de un equipo y enfrentandome a nuevos retos para poder desarrollar y seguir nutriendo mis habilidades como Programador.</p>
+        <p className='p-[2px]'>Me encuentro ansioso por seguir creciendo, de poder formar parte de un equipo y enfrentarme a nuevos retos para poder desarrollar y seguir nutriendo mis habilidades como Programador.</p>
       </div>
 
     </div>
