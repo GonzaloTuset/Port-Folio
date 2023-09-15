@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
         </button>
         </div>
         {menuOpen && (
-        <div className="  h-screen w-[187.5px] bg-[rgb(23,29,37)]  md:hidden mt-2space-y-2 flex flex-col items-center ">
+        <div className="  h-screen w-[187.5px] mt-[16px] bg-[rgb(23,29,37)]  md:hidden mt-2space-y-2 flex flex-col items-center ">
           <a
             onClick={() => {
               scrollToSection("home");
