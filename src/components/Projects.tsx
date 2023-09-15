@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
         },
-      });
+      })
 
       try {
         // Realiza la solicitud a la API de GitHub para obtener repositorios
@@ -70,11 +70,11 @@ const Projects: React.FC = () => {
             </div>
           </div>
           <div className='w-[330px] px-[8px] py-[8px] family  '>
-            <p className='pb-[5px]'>Lenguaje: {repo.language}</p>
-            <p>
+            <p className='text-[#969696] pb-[5px]'>Hecho en: {repo.language}</p>
+            <p className='text-[#969696]'>
             Última actualización: {format(
               zonedTimeToUtc(repo.pushed_at, 'Etc/GMT'), 
-              `HH:mm:ss dd/MM/yyyy`, // Formato de fecha y hora
+              `dd/MM/yyyy`, // Formato de fecha y hora
               { timeZone: 'America/Argentina/Buenos_Aires' } // Zona horaria de destino (Argentina)
             )}
           </p>

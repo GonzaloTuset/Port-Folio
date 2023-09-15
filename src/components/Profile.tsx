@@ -26,9 +26,8 @@ const Profile: React.FC = () => {
               <p >23</p>
             </div>
           </div>
-          <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent flex flex-col justify-center '>
-            <p className='text-white flex mt-[1px]'>Intereses</p>
-            <p className='text-white family text-[12px] mb-[6px]'>Programar, trabajar en equipo, adquirir nuevos conocimientos y estar en constante aprendizaje.</p>
+          <div className=' w-[206px] h-[70px] px-2 py-2 rounded tranparent flex justify-center items-center'>
+            <p className='text-white family text-[12px] mb-[6px]'>Me interesa trabajar en equipo e ir mejorando como programador</p>
           </div>
         </div>
       </div>

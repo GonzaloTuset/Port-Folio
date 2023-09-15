@@ -25,7 +25,7 @@ bdi {
 }
 .family{
   font-family: "Motiva Sans", Sans-serif;
-  
+  letter-spacing: 0.5px;
 }
 .blur-custom {
   filter: blur(1px);
