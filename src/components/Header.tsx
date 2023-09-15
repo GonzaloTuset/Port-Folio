@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from '../assets/logo_blanco-removebg-preview.png'
 interface HeaderProps {
   scrollToSection: (sectionId: string) => void;
 }
@@ -11,16 +12,19 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   return (
     <>
     
-    <div className="fixed top-0 left-0 w-screen  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row-reverse md:flex md:justify-center">
+    <div className="fixed top-0 left-0 w-screen  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row md:flex  justify-between md:justify-center">
+    <img className="pl-[10px]" src={Logo}></img>
      <div className=" hidden md:flex md:flex-row md:justify-center">
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
       <a onClick={() => scrollToSection("about")}>Proyectos</a>
       <a onClick={() => scrollToSection("tech")}>Tech stack</a>
       <a onClick={() => scrollToSection("Contact")}>Contacto</a>
      </div>
+     <div>
+      <div className="flex justify-end">
      <button
           onClick={toggleMenu}
-          className="  flex md:hidden text-white  hover:text-gray-400 focus:outline-none pr-[10px]"
+          className="  flex md:hidden text-white  hover:text-gray-400 focus:outline-none pr-[10px] justify-end"
         >
           <svg
             className=" md:hidden w-6 h-6 "
@@ -38,8 +42,9 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
             )}
           </svg>
         </button>
+        </div>
         {menuOpen && (
-        <div className=" mt-[30px] h-screen w-1/2 bg-[rgb(23,29,37)] fixed md:hidden mt-2space-y-2 flex flex-col  ">
+        <div className="  h-screen w-[187.5px] bg-[rgb(23,29,37)]  md:hidden mt-2space-y-2 flex flex-col items-center ">
           <a
             onClick={() => {
               scrollToSection("home");
@@ -78,6 +83,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
           </a>
         </div>
       )}
+    </div>
     </div>
     </>
   );
