@@ -26,10 +26,10 @@ const ContactForm: React.FC = () => {
       message: message,
     })
       .then((response) => {
-        console.log('Correo electrónico enviado con éxito', response);
+        console.log('Correo electrónico enviado con éxito ', response);
       })
       .catch((error) => {
-        console.error('Error al enviar el correo electrónico', error);
+        console.error('Error al enviar el correo electrónico ', error);
       });
   };
 
