@@ -59,7 +59,7 @@ const ContactForm: React.FC = () => {
       </div>
           <textarea
             className='rounded-sm family text-[#969696] bg-[#00000080] w-[307px] resize-none h-[38px] flex'
-            placeholder="mensaje"
+            placeholder="Escribe tu mensaje..."
             id="message"
             name="message"
             required
