@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div className='flex flex-row-reverse '>
-        <button className='bg-[#708d05] rounded-sm flex items-center shadow-md transform transition-transform hover:shadow-lg' type="submit">Enviar</button>
+        <button className='bg-[#708d05] w-[100px] rounded-sm flex items-center justify-center shadow-md transform transition-transform hover:shadow-lg mr-[10px] mb-[4px]' type="submit">Enviar</button>
         </div>      
       </form>
     </div>
