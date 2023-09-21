@@ -60,15 +60,15 @@ const Projects: React.FC = () => {
       {/*<a  href={`https://github.com/GonzaloTuset/${repo.name}`}>*/}
       {repositories.map((repo) => (
         <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col md:flex-row' >
-          <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px]'>
+          <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px] md:justify-between md:w-[400px]'>
             <div className='h-[69px] flex flex-col'>
             <img className='w-[168px] h-[69px]' src={`${missImage}`} />
             </div>
-            <div className='flex items-center h-[69px] w-[120px] pt-[10px]'>
-              <h2 className='family pl-[15px] text-[20px] w-[120px]'>{repo.name}</h2>
+            <div className='flex items-center h-[69px] w-[120px] pt-[10px] '>
+              <h2 className='family pl-[15px] text-[20px] w-[120px]  md:pl-[0px]'>{repo.name}</h2>
             </div>
           </div>
-          <div className='w-[330px] px-[8px] py-[8px] family  '>
+          <div className='w-[330px] px-[8px] py-[8px] family md:flex md:flex-col md:justify-end md:items-end  '>
             <p className='text-[#969696] pb-[5px]'>Hecho en: {repo.language}</p>
             <p className='text-[#969696]'>
              Última actualización: {format(
