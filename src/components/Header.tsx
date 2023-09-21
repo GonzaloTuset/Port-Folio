@@ -12,12 +12,12 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   return (
     <>
     
-    <div className="fixed top-0 left-0 w-screen  bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row md:flex  justify-between md:justify-center">
+    <div className="fixed top-0 left-0 w-screen bg-[rgb(23,29,37)] md:p-4 py-[16px] h-[56px] shadow z-50 text-[rgb(234,249,249)] flex flex-row md:flex  justify-between">
     <img className="pl-[10px]" src={Logo}></img>
-     <div className=" hidden md:flex md:flex-row md:justify-center">
+     <div className=" hidden md:flex md:flex-row md:justify-around w-[1000px] md:pr-[30px] family ">
       <a onClick={() => scrollToSection("home")}>Sobre mi</a>
-      <a onClick={() => scrollToSection("about")}>Proyectos</a>
       <a onClick={() => scrollToSection("tech")}>Tech stack</a>
+      <a onClick={() => scrollToSection("about")}>Proyectos</a>
       <a onClick={() => scrollToSection("Contact")}>Contacto</a>
      </div>
      <div>
