@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
       {/* Renderiza los últimos 3 repositorios actualizados */}
       {/*<a  href={`https://github.com/GonzaloTuset/${repo.name}`}>*/}
       {repositories.map((repo) => (
-        <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col' >
+        <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col md:flex-row' >
           <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px]'>
             <div className='h-[69px] flex flex-col'>
             <img className='w-[168px] h-[69px]' src={`${missImage}`} />

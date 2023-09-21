@@ -16,15 +16,15 @@ import LinkedIn from '../assets/LinkedIn.svg'
 
 const Info: React.FC = () => {
   return (
-    <div className="  h-[360px] md:h-[925px] card px-[3px] flex flex-col mb-[12px] items-center md:w-[288px]  md:items-center ">
+    <div className="  h-[360px] md:h-[780px] card px-[3px] flex flex-col mb-[12px] items-center md:w-[288px]  md:items-center ">
       <div className='w-[367.5px] h-[45px] info_trasn md:bg-transparent flex md:w-full items-center mb-[12px]'>
         <a className="family text-[20px] mx-[12px] my-[12px] text-[rgba(81,188,206)]">Open To Work</a>
       </div>
 
       <div className="h-[380px] w-[367.5px] flex flex-row justify-between md:w-full md:flex md:flex-col">
-        <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[290px] px-[4px] py-[4px] flex flex-col">
+        <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[290px] px-[4px] py-[4px] flex flex-col md:w-full md:mb-[4px] md:bg-transparent ">
           <div className="w-[163px] h-[29px] flex items-center mx-[12px] my-[12px]"><a className="family text-[#ffffff]">Tech Stack</a></div>
-          <div className=' grid gap-4 grid-cols-3 grid-rows-3'>
+          <div className=' grid gap-4 grid-cols-3 grid-rows-3 md:justify-items-center'>
             <img className='w-[10xp] h-[40px] ' src={react} />
             <img className='w-[10xp] h-[40px] rounded-sm' src={javascript} />
             <img className='w-[10xp] h-[40px] rounded-sm' src={tailwind} />
@@ -41,9 +41,9 @@ const Info: React.FC = () => {
           </div>
         </div>
         <div className='flex flex-col '>
-          <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[135px] px-[4px] py-[4px] flex flex-col mb-[4px]">
+          <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[135px] px-[4px] py-[4px] flex flex-col mb-[4px] md:w-full md:bg-transparent">
             <div className="w-[163px] h-[29px] flex items-center mx-[12px] my-[12px]"><a className="family text-[#ffffff]">Mis redes</a></div>
-            <div className=' flex flex-row items-center '>
+            <div className=' flex flex-row items-center justify-center '>
               <a href='https://www.linkedin.com/in/gonzalo-tuset-a6116b202/'>
                 <img className='h-[60px]' src={LinkedIn} alt='linkedIn_link' />
               </a>
@@ -52,7 +52,7 @@ const Info: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[151px] px-[4px] py-[4px] flex flex-col mb-[4px]">
+          <div className=" bg-[rgba(0,0,0,0.5)] w-[180px] h-[151px] px-[4px] py-[4px] flex flex-col mb-[4px] md:w-full md:bg-transparent">
             <div className="w-[163px] h-[40px] flex items-center mx-[12px] my-[12px]">
               <a className="family text-[#ffffff]">
                 Mi Informacion

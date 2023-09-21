@@ -53,12 +53,12 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-        <div className='flex flex-row  justify-around items-center px-[8px] py-[8px]'>
-        <div className='w-[38px] h-[38px] border-cyan-300 border-2 mr-[8px]'>
+      <div className='flex flex-row  justify-around items-center px-[8px] py-[8px] md:w-full md:justify-normal'>
+        <div className='w-[38px] h-[38px] border-cyan-300 border-2 mr-[8px] '>
         <img className='w-[38px] h-[34px]' src={perfil}></img>
       </div>
           <textarea
-            className='rounded-sm family text-[#969696] bg-[#00000080] w-[307px] resize-none h-[38px] flex'
+            className='rounded-sm family text-[#969696] bg-[#00000080] w-[307px] resize-none h-[38px] flex md:w-full'
             placeholder="Escribe tu mensaje..."
             id="message"
             name="message"
