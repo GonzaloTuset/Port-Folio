@@ -20,7 +20,8 @@ If you are developing a production application, we recommend updating the config
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
    },
-```
+```![Captura](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/d04f005d-d4f5-4e2d-9d90-a6f93860cc90)
+
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
