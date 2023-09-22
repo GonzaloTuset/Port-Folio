@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
         <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col md:flex-row' >
           <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px] md:justify-between md:w-[400px]'>
             <div className='h-[69px] flex flex-col'>
-              <img className='w-[168px] h-[69px]' src={repo.name === "Port-Folio" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435`
+              <img className='w-[168px] h-[69px]' src={repo.name === "Port-Folio" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/7d5d1136-5c1f-4791-97f0-1a14bbef2d79`
               : 
               repo.name === "Google-Form" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/f6eefcbc-884e-444b-bf79-8f58a4ccf33b` 
               :
