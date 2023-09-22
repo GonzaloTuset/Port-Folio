@@ -79,11 +79,16 @@ const Projects: React.FC = () => {
             </div>
             <a className='w-[50px] flex  justify-center md:hidden'  href={repo.homepage}>
               <div className='bg-white rounded-full h-[35px] w-[35px] flex items-center justify-center '>
-              <img className='h-[20px]' src={goDeploy}/>
+              <img className='h-[20px] pl-[3px]' src={goDeploy}/>
               </div>
             </a>
           </div>
           <div className='w-[330px] px-[8px] py-[8px] family md:flex md:flex-col md:justify-end md:items-end  '>
+              <a className='hidden md:flex md:h-[86px]'  href={repo.homepage}>
+              <div className='bg-white rounded-full h-[35px] w-[35px] flex items-center justify-center '>
+              <img className='h-[20px] pl-[3px]' src={goDeploy}/>
+              </div>
+            </a>
             <p className='text-[#969696] pb-[5px]'>Hecho en: {repo.language}</p>
             <p className='text-[#969696]'>
               Última actualización: {format(
