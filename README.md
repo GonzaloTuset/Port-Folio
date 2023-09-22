@@ -9,6 +9,8 @@ Currently, two official plugins are available:
 
 ## Imagenes
 Mobile:
-![image](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435)
-web:
+![final](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/7d5d1136-5c1f-4791-97f0-1a14bbef2d79)
 
+
+mobile:
+![image](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435)
