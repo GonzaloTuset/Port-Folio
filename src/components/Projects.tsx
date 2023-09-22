@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios'
 import { useState, useEffect } from 'react'
 import { zonedTimeToUtc, format } from 'date-fns-tz'
 import missImage from '../assets/noSeEncuentra.png'
+import goDeploy from '../assets/go-page.svg'
 
 interface Repository {
   id: string
@@ -10,6 +11,7 @@ interface Repository {
   pushed_at: string
   private: boolean
   image: string
+  homepage:string
 }
 
 const Projects: React.FC = () => {
@@ -29,6 +31,7 @@ const Projects: React.FC = () => {
         // Realiza la solicitud a la API de GitHub para obtener repositorios
         const response = await instance.get('')
         const repos: Repository[] = response.data
+        console.log(repos)
 
         // Filtra los repositorios privados
         const publicRepos = repos.filter(repo => !repo.private && repo.name !== "GonzaloTuset")
@@ -59,18 +62,26 @@ const Projects: React.FC = () => {
       {/* Renderiza los últimos 3 repositorios actualizados */}
       {/*<a  href={`https://github.com/GonzaloTuset/${repo.name}`}>*/}
       {repositories.map((repo) => (
+        
         <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col md:flex-row' >
           <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px] md:justify-between md:w-[400px]'>
             <div className='h-[69px] flex flex-col'>
-              <img className='w-[168px] h-[69px]' src={`https://github.com/GonzaloTuset/${repo.name}/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435`}
-              /*Verifica que el link devuelva la imagen sino pone la imagen base*/
-                onError={(e) => {
-                  e.currentTarget.src = missImage;
-                }} />
+              <img className='w-[168px] h-[69px]' src={repo.name === "Port-Folio" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435`
+              : 
+              repo.name === "Google-Form" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/f6eefcbc-884e-444b-bf79-8f58a4ccf33b` 
+              :
+              repo.name === "Ari-page" ?  `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/eaf06809-d987-40be-9b8a-3795be8d1cca` :  missImage     
+            }
+ />
             </div>
             <div className='flex items-center h-[69px] w-[120px] pt-[10px] '>
               <h2 className='family pl-[15px] text-[20px] w-[120px]  md:pl-[0px]'>{repo.name}</h2>
             </div>
+            <a className='w-[50px] flex  justify-center md:hidden'  href={repo.homepage}>
+              <div className='bg-white rounded-full h-[35px] w-[35px] flex items-center justify-center '>
+              <img className='h-[20px]' src={goDeploy}/>
+              </div>
+            </a>
           </div>
           <div className='w-[330px] px-[8px] py-[8px] family md:flex md:flex-col md:justify-end md:items-end  '>
             <p className='text-[#969696] pb-[5px]'>Hecho en: {repo.language}</p>
@@ -85,7 +96,6 @@ const Projects: React.FC = () => {
 
 
         </div>
-
       ))}
     </div>
 
