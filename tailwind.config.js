@@ -6,7 +6,13 @@ export default {
 ],
     mode: 'jit',
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'left': 'left',
+      },
+      'translate-x-0': 'translateX(0)',
+    'translate-x-full': 'translateX(100%)',
+    },
   },
   plugins: [],
 }

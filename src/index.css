@@ -63,6 +63,14 @@ video {
 }
 
 
+.menu-open {
+  transform: translateX(0); /* Cambia la propiedad transform según tu diseño */
+  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de tiempo según tus preferencias */
+}
+.menu-open.active {
+  transform: translateX(100%); /* Desplaza el menú hacia la derecha (ajusta el valor según tu diseño) */
+}
+
 .main-bg {
   background: radial-gradient(farthest-side at top right, var(--gradient-right), transparent 500px),
   radial-gradient(farthest-corner at top left, var(--gradient-left), transparent 600px),

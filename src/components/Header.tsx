@@ -43,8 +43,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
               </svg>
             </button>
           </div>
-          {menuOpen && (
-            <div className="  h-screen w-[187.5px] mt-[16px] bg-[rgb(23,29,37)]  md:hidden mt-2space-y-2 flex flex-col items-center gap-[10px]">
+          {menuOpen  && (
+            <div className= {`h-screen w-[187.5px]  bg-[rgb(23,29,37)]  md:hidden mt-4 space-y-2 flex flex-col items-center gap-[10px] transition-left duration-500 ${menuOpen ? 'left-0' : 'left-full'}`}>
               <a
                 onClick={() => {
                   scrollToSection("home");
@@ -81,8 +81,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
               >
                 Contacto
               </a>
-              <div>
-                
+              <div className="h-[380px] flex items-end pr-[15px] pb-[15px]">
+                <img src={Logo}/>
               </div>
             </div>
           )}
