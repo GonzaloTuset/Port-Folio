@@ -43,46 +43,48 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
               </svg>
             </button>
           </div>
-          {menuOpen  && (
-            <div className= {`h-screen w-[187.5px]  bg-[rgb(23,29,37)]  md:hidden mt-4 space-y-2 flex flex-col items-center gap-[10px] transition-left duration-500 ${menuOpen ? 'left-0' : 'left-full'}`}>
-              <a
-                onClick={() => {
-                  scrollToSection("home");
-                  toggleMenu();
-                }}
-                className="block px-4 py-2 text-white hover:bg-gray-600"
-              >
-                Sobre mi
-              </a>
-              <a
-                onClick={() => {
-                  scrollToSection("about");
-                  toggleMenu();
-                }}
-                className="block px-4 py-2 text-white hover:bg-gray-600"
-              >
-                Proyectos
-              </a>
-              <a
-                onClick={() => {
-                  scrollToSection("tech");
-                  toggleMenu();
-                }}
-                className="block px-4 py-2 text-white hover:bg-gray-600"
-              >
-                Tech stack
-              </a>
-              <a
-                onClick={() => {
-                  scrollToSection("Contact");
-                  toggleMenu();
-                }}
-                className="block px-4 py-2 text-white hover:bg-gray-600"
-              >
-                Contacto
-              </a>
+          {menuOpen && (
+            <div className={` ${menuOpen ? "menu-open" : ''}`}>
+              <div className=" h-[215px] space-y-2">
+                <a
+                  onClick={() => {
+                    scrollToSection("home");
+                    toggleMenu();
+                  }}
+                  className="block px-4 py-2 text-white hover:bg-gray-600"
+                >
+                  Sobre mi
+                </a>
+                <a
+                  onClick={() => {
+                    scrollToSection("about");
+                    toggleMenu();
+                  }}
+                  className="block px-4 py-2 text-white hover:bg-gray-600"
+                >
+                  Proyectos
+                </a>
+                <a
+                  onClick={() => {
+                    scrollToSection("tech");
+                    toggleMenu();
+                  }}
+                  className="block px-4 py-2 text-white hover:bg-gray-600"
+                >
+                  Tech stack
+                </a>
+                <a
+                  onClick={() => {
+                    scrollToSection("Contact");
+                    toggleMenu();
+                  }}
+                  className="block px-4 py-2 text-white hover:bg-gray-600"
+                >
+                  Contacto
+                </a>
+              </div>
               <div className="h-[380px] flex items-end pr-[15px] pb-[15px]">
-                <img src={Logo}/>
+                <img src={Logo} />
               </div>
             </div>
           )}

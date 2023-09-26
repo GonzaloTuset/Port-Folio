@@ -64,8 +64,21 @@ video {
 
 
 .menu-open {
-  transform: translateX(0); /* Cambia la propiedad transform según tu diseño */
-  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de tiempo según tus preferencias */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  background-color: rgb(23,29,37);
+  height: 100vh;
+  width: 187.5px;
+  transform: translateX(0);
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+@media (min-width: 800px) {
+  .menu-open{
+    display: none;
+  }
 }
 .menu-open.active {
   transform: translateX(100%); /* Desplaza el menú hacia la derecha (ajusta el valor según tu diseño) */
