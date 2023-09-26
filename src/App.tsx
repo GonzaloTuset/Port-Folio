@@ -19,7 +19,7 @@ function App() {
    <Header scrollToSection={scrollToSection}/>
    <main className="flex flex-col items-center" >
    <div className="md:w-[976px] main-bg w-screen">
-      <section id="home" >
+      <section id="profile" >
           <Profile/>
       </section>
       <div className="md:w-[976px] md:flex md:flex-row-reverse  md:justify-around">
