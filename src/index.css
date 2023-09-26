@@ -62,8 +62,7 @@ video {
   object-fit: cover;
 }
 
-
-.menu-open {
+.menu-transition {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,17 +70,25 @@ video {
   background-color: rgb(23,29,37);
   height: 100vh;
   width: 187.5px;
-  transform: translateX(0);
   gap: 10px;
-  transition: transform 0.5s ease-in-out;
+  z-index: 100;
 }
+.menu-open {
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 1;
+}
+.menu-closed{
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+
 @media (min-width: 800px) {
   .menu-open{
     display: none;
   }
-}
-.menu-open.active {
-  transform: translateX(100%); /* Desplaza el menú hacia la derecha (ajusta el valor según tu diseño) */
 }
 
 .main-bg {

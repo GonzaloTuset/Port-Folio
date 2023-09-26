@@ -7,8 +7,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [menuOpen, setmenuOpen] = useState(false)
   const toggleMenu = () => {
-    setmenuOpen(!menuOpen)
-  }
+      setmenuOpen(!menuOpen)
+  };
   return (
     <>
 
@@ -43,8 +43,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
               </svg>
             </button>
           </div>
-          {menuOpen && (
-            <div className={` ${menuOpen ? "menu-open" : ''}`}>
+          {menuOpen ? (
+            <div className={`menu-transition ${menuOpen ? 'menu-open' : 'menu-closed'}`}>
               <div className=" h-[215px] space-y-2">
                 <a
                   onClick={() => {
@@ -87,7 +87,48 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
                 <img src={Logo} />
               </div>
             </div>
-          )}
+          ): <div className={`menu-transition ${menuOpen ? 'menu-open' : 'menu-closed'}`}>
+          <div className=" h-[215px] space-y-2">
+            <a
+              onClick={() => {
+                scrollToSection("home");
+
+              }}
+              className="block px-4 py-2 text-white hover:bg-gray-600"
+            >
+              Sobre mi
+            </a>
+            <a
+              onClick={() => {
+                scrollToSection("about");
+
+              }}
+              className="block px-4 py-2 text-white hover:bg-gray-600"
+            >
+              Proyectos
+            </a>
+            <a
+              onClick={() => {
+                scrollToSection("tech");
+
+              }}
+              className="block px-4 py-2 text-white hover:bg-gray-600"
+            >
+              Tech stack
+            </a>
+            <a
+              onClick={() => {
+                scrollToSection("Contact");
+              }}
+              className="block px-4 py-2 text-white hover:bg-gray-600"
+            >
+              Contacto
+            </a>
+          </div>
+          <div className="h-[380px] flex items-end pr-[15px] pb-[15px]">
+            <img src={Logo} />
+          </div>
+        </div>}
         </div>
       </div>
     </>
