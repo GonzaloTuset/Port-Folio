@@ -14,3 +14,4 @@ Mobile:
 
 mobile:
 ![image](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/c46e6714-7065-482a-9c47-7f5696bc4435)
+![port folio web](https://github.com/GonzaloTuset/Port-Folio/assets/110003160/626a92b9-d61b-451b-bac3-a76f7209141b)
