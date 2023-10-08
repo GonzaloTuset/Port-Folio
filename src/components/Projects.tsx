@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
       {repositories.map((repo) => (
         
         <div key={repo.id} className=' mt-[20px] mx-[10px] mb-[11px] h-[155px] card flex flex-col md:flex-row' >
-          <div className='flex flex-row  h-[85px] w-[350px] px-[8px] py-[8px] md:justify-between md:w-[400px]'>
+          <div className='flex flex-row  h-[85px] w-full px-[8px] py-[8px] md:justify-between md:w-[400px]'>
             <div className='h-[69px] flex flex-col'>
               <img className='w-[168px] h-[69px]' src={repo.name === "Port-Folio" ? `https://github.com/GonzaloTuset/${repo.name}/assets/110003160/7d5d1136-5c1f-4791-97f0-1a14bbef2d79`
               : 
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
             <div className='flex items-center h-[69px] w-[120px] pt-[10px] '>
               <h2 className='family pl-[15px] text-[20px] w-[120px]  md:pl-[0px]'>{repo.name}</h2>
             </div>
-            <a className='w-[50px] flex  justify-center md:hidden'  href={repo.homepage}>
+            <a className='w-[50px] flex  justify-center md:hidden pl-[10px]'  href={repo.homepage}>
               <div className='bg-white rounded-full h-[35px] w-[35px] flex items-center justify-center '>
               <img className='h-[20px] pl-[3px]' src={goDeploy}/>
               </div>
