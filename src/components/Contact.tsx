@@ -36,8 +36,8 @@ const ContactForm: React.FC = () => {
   return (
     <div className='family  px-[3px]'>
      <form onSubmit={handleSubmit}>
-      <div className='text-[14px] h-[29px] tranparent bg-[#0000004D] text-[#969696] flex flex-row  justify-evenly items-center mt-[50px]'>
-      <h2 className='text-[20px]'>¡Trabajemos juntos!</h2>
+      <div className='text-[14px] h-[29px]  tranparent bg-[#0000004D] text-[#969696] flex flex-row  justify-evenly items-center mt-[50px]'>
+      <h2 className='text-[18px] md:text-[20px]'>¡Trabajemos juntos!</h2>
       
      
         <div>
